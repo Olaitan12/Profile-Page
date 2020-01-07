@@ -57,7 +57,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           Column(
             children: <Widget>[
               Container(
-                height: 280,
+                height: 250,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   gradient: new LinearGradient(colors: [gradientStart,gradientEnd],),
@@ -89,7 +89,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-                  Text("HEALTH,                     89%", 
+                  Text("   HEALTH                     89%", 
                     style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
@@ -107,6 +107,78 @@ class _ProfileScreenState extends State<ProfileScreen> {
               )
             ],
           ),
+          Padding(
+            padding: const EdgeInsets.only(top: 1.0,bottom: 60),
+            child: Text(
+              "Last Appoinments", 
+              style: TextStyle(
+                fontFamily: "AbrilFatface",
+                fontSize: 20,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 150.0),
+            child: Stack(
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.fromLTRB(20.0, 5.8, 20.0, 5.8),
+                  height: 150.0,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(bottomRight: Radius.circular(20), bottomLeft: Radius.circular(20), topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+                    color: Color(0xfff6f4ff),
+                  ),
+                  child: Stack(
+                    children: <Widget>[
+                      Container(
+                        height: 150,
+                        width: 100,
+                        decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20), topRight: Radius.circular(20), topLeft: Radius.circular(20)),
+                        color: Color(0xff7874f8),
+                        ),
+                        child: Icon(
+                          Icons.credit_card
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 50.0),
+            child: Stack(
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.fromLTRB(20.0, 450.8, 20.0, 5.8),
+                  height: 150,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20), topRight: Radius.circular(20), topLeft: Radius.circular(20)),
+                    color: Color(0xfffef3f1),
+                  ),
+                  child: Stack(
+                    children: <Widget>[
+                      Container(
+                        height: 150,
+                        width: 100,
+                        decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20), topRight: Radius.circular(20), topLeft: Radius.circular(20)),
+                        color: Color(0xfffe5c17),
+                        ),
+                        child: Icon(
+                          Icons.crop
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
+          )
         ],
       ),
       bottomNavigationBar: AnimatedBottomBar(
