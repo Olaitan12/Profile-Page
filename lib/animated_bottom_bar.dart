@@ -58,7 +58,7 @@ class _AnimatedBottomBarState extends State<AnimatedBottomBar> with TickerProvid
             children: <Widget>[
               Icon(
                 item.iconData, 
-                size: 32.0,
+                size: 25.0,
                 color: isSelected ? item.color : Color(0xff6b2c57),),
               SizedBox(
                 width: 10.0
@@ -73,7 +73,7 @@ class _AnimatedBottomBarState extends State<AnimatedBottomBar> with TickerProvid
               style: TextStyle(
                 color: item.color,
                 fontWeight: FontWeight.bold,
-                fontSize: 15,
+                fontSize: 10,
                 fontFamily: "AbrilFatface",
               ),)
             ],

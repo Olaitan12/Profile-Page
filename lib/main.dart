@@ -129,22 +129,35 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     borderRadius: BorderRadius.only(bottomRight: Radius.circular(20), bottomLeft: Radius.circular(20), topLeft: Radius.circular(20), topRight: Radius.circular(20)),
                     color: Color(0xfff6f4ff),
                   ),
-                  child: Stack(
-                    children: <Widget>[
-                      Container(
-                        height: 150,
-                        width: 100,
-                        decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20), topRight: Radius.circular(20), topLeft: Radius.circular(20)),
-                        color: Color(0xff7874f8),
-                        ),
-                        child: Icon(
-                          Icons.credit_card
-                        ),
-                      )
-                    ],
+                  child: Center(
+                    child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                      children: <Widget>[
+                        Text("                                        Injections", style: TextStyle(fontFamily: "AbrilFatface", fontSize: 15)),
+                        Text("12.08.2019", style: TextStyle(fontFamily: "AbrilFatface", fontSize: 10.0, color: Color(0xffe1dfea))),
+                      ],
+                    ),
                   ),
-                )
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 5.0, left: 20),
+                  child: Stack(
+                      children: <Widget>[
+                        Container(
+                          height: 150,
+                          width: 100,
+                          decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20), topRight: Radius.circular(20), topLeft: Radius.circular(20)),
+                          color: Color(0xff7874f8),
+                          ),
+                          child: Icon(
+                            Icons.input
+                          ),
+                        ),
+                      ],
+                    ),
+                ),
               ],
             ),
           ),
@@ -160,24 +173,60 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20), topRight: Radius.circular(20), topLeft: Radius.circular(20)),
                     color: Color(0xfffef3f1),
                   ),
-                  child: Stack(
-                    children: <Widget>[
-                      Container(
-                        height: 150,
-                        width: 100,
-                        decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20), topRight: Radius.circular(20), topLeft: Radius.circular(20)),
-                        color: Color(0xfffe5c17),
-                        ),
-                        child: Icon(
-                          Icons.crop
-                        ),
-                      )
-                    ],
+                  child: Center(
+                    child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                      children: <Widget>[
+                        Text("                                          Control Visit", style: TextStyle(fontFamily: "AbrilFatface", fontSize: 15)),
+                        Text("12.06.2019", style: TextStyle(fontFamily: "AbrilFatface", fontSize: 10.0, color: Color(0xffe1dfea))),
+                      ],
+                    ),
                   ),
-                )
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 450.0, left: 20),
+                  child: Stack(
+                      children: <Widget>[
+                        Container(
+                          height: 150,
+                          width: 100,
+                          decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20), topRight: Radius.circular(20), topLeft: Radius.circular(20)),
+                          color: Color(0xfffe5c17),
+                          ),
+                          child: Icon(
+                            Icons.airline_seat_legroom_extra
+                          ),
+                        ),
+                      ],
+                    ),
+                ),
               ],
             ),
+          ),
+          Stack(
+            children: <Widget>[
+              Container(
+                height: 50,
+                width: double.infinity,
+                margin: EdgeInsets.fromLTRB(20, 750, 20, 4),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10), bottomRight: Radius.circular(10), bottomLeft: Radius.circular(10)),
+                  color: Color(0xffffb53f),
+                ),
+                child: Center(
+                  child: Text(
+                    "Set up an appointment",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: "AbrilFatface",
+                      fontWeight: FontWeight.w200
+                    ),
+                  ),
+                ),
+              )
+            ],
           )
         ],
       ),
