@@ -67,18 +67,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
-                    Text("     Mary Jane", style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      fontFamily: "AbrilFatface"
-                    )),
+                    Column(
+                      children: <Widget>[
+                        Row(
+                          children: <Widget>[
+                            Text("     Mary Jane", style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontFamily: "AbrilFatface"
+                            )),
+                          ],
+                        ),
+                      ],
+                    ),
                     Text("         Veterinarian, GCSE degree", style: TextStyle(
                       fontStyle: FontStyle.normal,
                       fontSize: 15,
                       color: Colors.white38,
                       fontFamily: "AbrilFatface",
                     )),
+                    Image.network('https://www.pexels.com/photo/white-and-black-2020-with-confetti-3496994/')
                   ],
                 ),
               ),
@@ -104,7 +113,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ],
           ),
                 ),
-              )
+              ),
             ],
           ),
           Padding(
@@ -123,20 +132,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
               children: <Widget>[
                 Container(
                   margin: EdgeInsets.fromLTRB(20.0, 5.8, 20.0, 5.8),
-                  height: 150.0,
+                  height: 120.0,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(bottomRight: Radius.circular(20), bottomLeft: Radius.circular(20), topLeft: Radius.circular(20), topRight: Radius.circular(20)),
                     color: Color(0xfff6f4ff),
                   ),
                   child: Center(
-                    child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                      children: <Widget>[
-                        Text("                                        Injections", style: TextStyle(fontFamily: "AbrilFatface", fontSize: 15)),
-                        Text("12.08.2019", style: TextStyle(fontFamily: "AbrilFatface", fontSize: 10.0, color: Color(0xffe1dfea))),
-                      ],
+                    child: Center(
+                      child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text("                                        Injections \n                                        Koutine vaccinations are given.\n                                       There are no Complications  " , style: TextStyle(fontFamily: "AbrilFatface", fontSize: 15)),
+                          Text("12.08.2019", style: TextStyle(fontFamily: "AbrilFatface", fontSize: 10.0, color: Color(0xffe1dfea))),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -145,7 +156,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   child: Stack(
                       children: <Widget>[
                         Container(
-                          height: 150,
+                          height: 120,
                           width: 100,
                           decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20), topRight: Radius.circular(20), topLeft: Radius.circular(20)),
@@ -166,8 +177,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
             child: Stack(
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.fromLTRB(20.0, 450.8, 20.0, 5.8),
-                  height: 150,
+                  margin: EdgeInsets.fromLTRB(20.0, 420.8, 20.0, 5.8),
+                  height: 120,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20), topRight: Radius.circular(20), topLeft: Radius.circular(20)),
@@ -176,20 +187,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   child: Center(
                     child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text("                                          Control Visit", style: TextStyle(fontFamily: "AbrilFatface", fontSize: 15)),
+                        Text("                                      Control Visit\n                                      During the routine examination\n                                       no diseases were detected", style: TextStyle(fontFamily: "AbrilFatface", fontSize: 15)),
                         Text("12.06.2019", style: TextStyle(fontFamily: "AbrilFatface", fontSize: 10.0, color: Color(0xffe1dfea))),
                       ],
                     ),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 450.0, left: 20),
+                  padding: const EdgeInsets.only(top: 420.0, left: 20),
                   child: Stack(
                       children: <Widget>[
                         Container(
-                          height: 150,
+                          height: 120,
                           width: 100,
                           decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20), topRight: Radius.circular(20), topLeft: Radius.circular(20)),
@@ -208,9 +219,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
           Stack(
             children: <Widget>[
               Container(
-                height: 50,
+                height: 100,
                 width: double.infinity,
-                margin: EdgeInsets.fromLTRB(20, 750, 20, 4),
+                margin: EdgeInsets.fromLTRB(20, 730, 20, 4),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10), bottomRight: Radius.circular(10), bottomLeft: Radius.circular(10)),
                   color: Color(0xffffb53f),
@@ -221,7 +232,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     style: TextStyle(
                       color: Colors.white,
                       fontFamily: "AbrilFatface",
-                      fontWeight: FontWeight.w200
+                      fontWeight: FontWeight.w200,
+                      fontSize: 20
                     ),
                   ),
                 ),
@@ -232,7 +244,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
       bottomNavigationBar: AnimatedBottomBar(
         barItems: widget.barItems,
-        animationDuration: const Duration(milliseconds: 500,)
+        animationDuration: const Duration(milliseconds: 100,)
       ),
     );
   }
