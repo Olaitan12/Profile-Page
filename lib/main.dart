@@ -16,7 +16,6 @@ class MyApp extends StatelessWidget {
 }
 
 class ProfileScreen extends StatefulWidget {
-
   final List<BarItem> barItems = [
     BarItem(
       text: "Home", 
@@ -41,12 +40,9 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-
-  int selectedBar =0;
-  
-  Color gradientStart = Color(0xff6b2c57);
-
   Color gradientEnd = Color(0xff6b2c57);
+  Color gradientStart = Color(0xff6b2c57);
+  int selectedBar =0;
 
   @override
   Widget build(BuildContext context) {
@@ -103,8 +99,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
                     fontFamily: "AbrilFatface",
-                  ),),
-                  Text("Avticity                    70%", 
+                  )),
+                    Text("Avticity                    70%",
                     style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
